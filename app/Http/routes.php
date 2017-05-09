@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::get('insert',function(){
+
+	$user = new App\User;
+	$user->name="Najmul";
+	$user->password="12345";
+	$user->save();
+
+});
