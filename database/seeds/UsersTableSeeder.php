@@ -36,34 +36,34 @@ class UsersTableSeeder extends Seeder
 
 
              DB::table('rooms')->insert(array(
-             array('room_name'=>'Delax','roomtype_id'=>'1','room_status'=>'empty'),
-             array('room_name'=>'Green_rooom','roomtype_id'=>'2','room_status'=>'booked'),
-             array('room_name'=>'Luxarious','roomtype_id'=>'3','room_status'=>'booked'),
-             array('room_name'=>'Beautiful','roomtype_id'=>'4','room_status'=>'empty'),
+             array('room_name'=>'Delax','room_status'=>'empty'),
+             array('room_name'=>'Green_rooom','room_status'=>'booked'),
+             array('room_name'=>'Luxarious','room_status'=>'booked'),
+             array('room_name'=>'Beautiful','room_status'=>'empty'),
 
           ));
 
 
+              DB::table('bookings')->insert(array(
+             array('name'=>'john','salaryID'=>'700000','designation'=>'Teacher','department'=>'CSE','email'=>'john@clivern.com','arriving_date'=>'12-05-2017','leaving_date'=>'14-05-2017','status'=>'empty'),
+
+             array('name'=>'Arafat','salaryID'=>'900000','designation'=>'Teacher','department'=>'ICE','email'=>'arafat@clivern.com','arriving_date'=>'13-05-2017','leaving_date'=>'14-05-2017','status'=>'empty'),
+
+             array('name'=>'najmul','salaryID'=>'800000','designation'=>'Teacher','department'=>'CSE','email'=>'najmul@clivern.com','arriving_date'=>'11-05-2017','leaving_date'=>'14-05-2017','status'=>'empty'),
+
+          ));
 
 
-             DB::table('booking_details')->insert(array(
-             array('booking_id'=>'1','booking_date'=>'12-05-2017','roomtype_id'=>'4'),
-             array('booking_id'=>'2','booking_date'=>'19-05-2017','roomtype_id'=>'1'),
-             array('booking_id'=>'3','booking_date'=>'10-05-2017','roomtype_id'=>'2'),
-             array('booking_id'=>'4','booking_date'=>'11-05-2017','roomtype_id'=>'3'),
-             array('booking_id'=>'5','booking_date'=>'15-05-2017','roomtype_id'=>'5'),
+              DB::table('booking_details')->insert(array(
+             array('booking_date'=>'12-05-2017'),
+             array('booking_date'=>'13-05-2017'),
+             array('booking_date'=>'11-05-2017'),
+             array('booking_date'=>'11-05-2017'),
+             array('booking_date'=>'15-05-2017'),
              
 
           ));
 
-
-
-              DB::table('bookings')->insert(array(
-             array('name'=>'john','salaryID'=>'700000','designation'=>'Teacher','department'=>'CSE','email'=>'john@clivern.com','arriving_date'=>'12-05-2017','leaving_date'=>'14-05-2017','room_id'=>'1','status'=>'empty'),
-             array('name'=>'Arafat','salaryID'=>'900000','designation'=>'Teacher','department'=>'ICE','email'=>'arafat@clivern.com','arriving_date'=>'13-05-2017','leaving_date'=>'14-05-2017','room_id'=>'2','status'=>'empty'),
-             array('name'=>'najmul','salaryID'=>'800000','designation'=>'Teacher','department'=>'CSE','email'=>'najmul@clivern.com','arriving_date'=>'11-05-2017','leaving_date'=>'14-05-2017','room_id'=>'3','status'=>'empty'),
-
-          ));
 
 
     }
