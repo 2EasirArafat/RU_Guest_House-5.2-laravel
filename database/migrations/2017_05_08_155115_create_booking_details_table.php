@@ -14,9 +14,9 @@ class CreateBookingDetailsTable extends Migration
     {
         Schema::create('booking_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('bookings_id');
+            $table->integer('booking_id');
             $table->date('booking_date');
-            $table->integer('room_types_id');
+            $table->integer('roomtype_id');
             $table->timestamps();
         });
     }

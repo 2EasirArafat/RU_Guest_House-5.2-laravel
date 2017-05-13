@@ -14,10 +14,10 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('users_id');
+            $table->integer('user_id');
             $table->date('arriving_date');
             $table->date('leaving_date');
-            $table->integer('rooms_id');
+            $table->integer('room_id');
             $table->string('status');
             $table->timestamps();
         });

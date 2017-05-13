@@ -12,7 +12,7 @@ class CreateRoomTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_types', function (Blueprint $table) {
+        Schema::create('roomtypes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('room_category');
             $table->integer('room_capacity');
@@ -27,6 +27,6 @@ class CreateRoomTypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('room_types');
+        Schema::drop('roomtypes');
     }
 }
