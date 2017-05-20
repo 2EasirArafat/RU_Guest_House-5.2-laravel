@@ -13,7 +13,12 @@ class RoomType extends Model
 
     public function room()
     {
-    	return $this->belongsTo('App\Room');
+    	return $this->hasOne('App\Room');
+    }
+
+    public function booking_details()
+    {
+    	return $this->hasOne('App\Booking_detail');
     }
 
 }

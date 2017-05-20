@@ -10,11 +10,11 @@ class Booking_detail extends Model
  
     function Booking()
     {
-        return $this->hasOne('App\Booking');
+        return $this->belongsTo('App\Booking');
     }
  
-    function Room()
+    function roomtype()
     {
-        return $this->hasOne('App\Room');
+        return $this->belongsTo('App\Room');
     }
 }

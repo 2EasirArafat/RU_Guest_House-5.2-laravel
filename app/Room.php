@@ -11,7 +11,7 @@ class Room extends Model
     ];
 
       function roomType(){
-        return $this->hasOne('App\RoomType');
+        return $this->belongsTo('App\RoomType');
     }
     function Booking()
     {
