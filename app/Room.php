@@ -10,12 +10,13 @@ class Room extends Model
         'room_name', 'roomtype_id', 'room_status',
     ];
 
-      function roomType(){
+      function roomtype(){
         return $this->belongsTo('App\RoomType');
     }
+    
     function Booking()
     {
-        return $this->hasOne('App\Booking');
+        return $this->hasMany('App\Booking');
     }
 
 }

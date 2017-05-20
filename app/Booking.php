@@ -10,12 +10,17 @@ class Booking extends Model
         'name', 'salaryID', 'designation','department','email','arriving_date','	leaving_date','room_id','status',
     ];
 
-     function Room(){
+    function room(){
         return $this->belongsTo('App\Room');
     }
 
     function booking_details()
     {
     	return $this->hasOne('App\booking_details');
+    }
+
+    function user()
+    {
+    	return $this->belongsTo('App\User');
     }
 }

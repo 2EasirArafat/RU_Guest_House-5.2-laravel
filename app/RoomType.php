@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomType extends Model
 {
-        protected $fillable = [
+    
+    protected $table = 'roomtypes';
+
+    protected $fillable = [
         'room_category', 'room_capacity',
     ];
 
