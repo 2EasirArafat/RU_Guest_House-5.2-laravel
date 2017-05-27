@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login','RoomTypeController@login');
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
