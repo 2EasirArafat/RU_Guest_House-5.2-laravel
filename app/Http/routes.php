@@ -15,9 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login','RoomTypeController@login');
+Route::get('index', 'UserController@showProfile');
+
+Route::get('login', 'UserController@showlogin');
+
+Route::get('check', 'UserController@showcheck');
+
+Route::get('room_booking','UserController@showroom_booking');
+
+Route::get('finalize','UserController@showfinalize');
+
+Route::get('details','UserController@showdetails');
 
 
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
