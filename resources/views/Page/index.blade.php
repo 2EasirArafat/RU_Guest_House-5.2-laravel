@@ -24,6 +24,8 @@
                 <h3>Architecture</h3>
                   <p>University of Rajshahi is home to many architectural and artistic landmarks, which area is about almost 304 hectors. The Shaheed Minar is an important example, complete with a mural designed by Murtaza Bashir. The Senate House is a modern mini-parliament house, has 206 rooms and fully air-condHitioned, usually used for meetings of the senate of the university, but it also accommodates national and international conferences, seminars and symposiam.</p>
               </div>
+              <hr>
+
             </div>
 
 @endsection

@@ -28,3 +28,9 @@ Route::get('finalize','UserController@showfinalize');
 Route::get('details','UserController@showdetails');
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('auth/logout', 'Auth\AuthController@logout');
