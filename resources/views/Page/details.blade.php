@@ -11,9 +11,8 @@
         </div> 
 
           <p class="alert alert-info text-right">
-           <a class="btn btn-primary" href="{{('finalize')}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
+           <a class="btn btn-md btn-primary" href="{{('finalize')}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
          </p>
-
 
 
         <table class="table table-hover">

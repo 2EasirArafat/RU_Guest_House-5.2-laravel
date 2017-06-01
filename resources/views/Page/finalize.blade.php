@@ -10,10 +10,6 @@
                   </div>
               </div> 
 
-      <div class="row">
-  <div class="col-md-12">
- 
-
 
       <div class="jumbotron">
       
@@ -59,13 +55,24 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-6">
-    <a href="#"/>  <button type="submit" class="btn btn-info">Print</button> </a>
-    </div>
-  </div>
+        <p class="text-right">
+        <label><label>
+        </p>
+
+          <p class="text-right">
+          <label>Guest Signature</label> 
+           </p>
+
+
 </form>
            </div>
+
+             <p class="text-right">
+          
+  <a class="btn btn-md btn-primary" href="{{('#')}}" role="button"><i class="glyphicon glyphicon-forward"></i>Print info</a> 
+           </p>
+
+
            </div> 
 
 

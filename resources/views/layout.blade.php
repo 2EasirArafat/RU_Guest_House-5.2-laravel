@@ -34,19 +34,21 @@
       
       </div> 
 
-      <hr>
+   
 
        <!--Start of Paragraph container-->
 
        <div class="container">
               @yield('text-content');
        </div>
-<hr>
 
+            <div class="container">
+                @yield('footer-content');
+                <footer class="container-fluid bg-4 text-center">
+                <p>@ 2017 RU guest house management system All rights reserved by <a href="#">Easir Arafat</a></p> 
+                </footer>
 
-            <footer class="container-fluid bg-4 text-center">
-            <p>@ 2017 RU guest house management system All rights reserved by <a href="#">Easir Arafat</a></p> 
-            </footer>
+             </div>
 
            
      </body>
