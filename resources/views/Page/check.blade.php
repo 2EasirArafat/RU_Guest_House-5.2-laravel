@@ -36,14 +36,13 @@
                             <tr>
                                 <th>Arriving Date</th> 
                                 <th>Leaving Date</th>
-                                <th>Room Type</th>
-                                <th>Room Category</th>
+                                <th>Room Name</th>
+                                <th width="15%">Action</th>
                                 <th>Status</th> 
                             </tr>
                             </thead>
+
                         </table>
-
-
                         </div>
                 </div>
              </div>

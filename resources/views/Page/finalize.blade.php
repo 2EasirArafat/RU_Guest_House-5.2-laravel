@@ -3,68 +3,48 @@
 @section('body-content')
 
 <div class="container">
-        <div class="panel-heading">
+        
+      <div class="jumbotron">
+
+      <div class="panel-heading">
                  <div class="panel-title text-center">
-                    <h1 class="title">Guest Information</h1>
+                    <h2 class="title">Teacher/Offier Information</h2>
                   
                   </div>
               </div> 
 
-
-      <div class="jumbotron">
+              <table class="table table-hover">
+                        <tbody>
+    <tr>
+      <th>Name</th>
       
-    <form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-3 control-label">Name</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText" placeholder="Name">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-3 control-label">Phone no</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText" placeholder="Phone no">
-    </div>
-  </div>
+    <tr>
+      <th>PhoneNo</th>
+      
+    <tr>
+      <th>SalaryID</th>
+     
+    <tr>
+      <th>Department</th>
+     
+    <tr>
+      <th>Designation</th>
+      
+    <tr>
+      <th>Email</th>
+     
+    </tr>
+  </tbody>
+</table>
 
 
-  <div class="form-group">
-    <label class="col-sm-3 control-label">SalaryID</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText" placeholder="SalaryID">
-    </div>
-  </div>
-   
-     <div class="form-group">
-    <label class="col-sm-3 control-label">Department</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText" placeholder="Department">
-    </div>
-  </div>
-  <div class="form-group">
-    <label  class="col-sm-3 control-label">Designation</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText" placeholder="Designation">
-    </div>
-  </div>
-
-    <div class="form-group">
-    <label class="col-sm-3 control-label">Email</label>
-    <div class="col-sm-8">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-
-        <p class="text-right">
-        <label><label>
-        </p>
-
-          <p class="text-right">
-          <label>Guest Signature</label> 
+<p class="text-right">
+          
+ Teacher/Officer Signature 
            </p>
 
-
-</form>
+      
+    
            </div>
 
              <p class="text-right">
