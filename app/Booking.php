@@ -14,11 +14,6 @@ class Booking extends Model
         return $this->belongsTo('App\Room');
     }
 
-    function booking_details()
-    {
-    	return $this->hasOne('App\booking_details');
-    }
-
     function user()
     {
     	return $this->belongsTo('App\User');

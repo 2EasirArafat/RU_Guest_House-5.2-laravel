@@ -17,26 +17,28 @@
                         <tbody>
     <tr>
       <th>Name</th>
-      
-    <tr>
-      <th>PhoneNo</th>
+      <td>{{($bookings->name)}}</td>
+  
       
     <tr>
       <th>SalaryID</th>
-     
+      <td>{{($bookings->salaryID)}}</td>
     <tr>
       <th>Department</th>
-     
+      <td>{{($bookings->department)}}
     <tr>
       <th>Designation</th>
+      <td>{{($bookings->designation)}}</td>
       
     <tr>
       <th>Email</th>
+      <td>{{($bookings->email)}}</td>
      
     </tr>
   </tbody>
 </table>
 
+<hr>
 
 <p class="text-right">
           

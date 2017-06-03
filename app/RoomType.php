@@ -19,9 +19,5 @@ class RoomType extends Model
     	return $this->hasOne('App\Room');
     }
 
-    public function booking_details()
-    {
-    	return $this->hasOne('App\Booking_detail');
-    }
 
 }

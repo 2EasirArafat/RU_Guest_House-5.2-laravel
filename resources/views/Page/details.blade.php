@@ -3,35 +3,42 @@
 @section('body-content')
 
  <div class="container">
+    <div class="jumbotron">
         <div class="panel-heading">
                  <div class="panel-title text-center">
-                    <h1 class="title">Confirmation Booking procedure</h1>
+                    <h2 class="title">Details Confirmation</h2>
                   
                   </div>
         </div> 
 
           <p class="alert alert-info text-right">
-           <a class="btn btn-md btn-primary" href="{{('finalize')}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
+           <a class="btn btn-primary" href="{{('finalize')}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
          </p>
+
 
 
         <table class="table table-hover">
             <tbody>
                       <tr>
+                             <th>ID</th>
+                              <td>{{('1')}}</td>
+                      <tr>
                              <th>Arriving Date</th>
-                              <td></td>
+                              <td>{{('01-05-2017')}}</td>
                       <tr>
                              <th>Leaving Date</th>
-                             <td></td>
+                             <td>{{('03-05-2017')}}</td>
                       <tr>
+
+
                               <th>Total Days</th>
-                              <td></td>
+                              <td>{{('2')}}</td>
                       <tr>
                              <th>Room Name</th>
-                             <td></td>
+                             <td>{{('Room-120')}}</td>
                       <tr>
                               <th>Room Capacity</th>
-                              <td></td>
+                              <td>{{('3')}}</td>
   
     </tr>
   </tbody>
@@ -41,5 +48,14 @@
 
 </div>
 
+</div>
 
 @endsection
+
+{{--    $date = \Carbon\Carbon::parse('2016-09-17 11:00:00');
+                              $now =\Carbon\Carbon::now();
+
+                              $diff = $date->diffInDays($now);
+                              <td> {{ $diff }} </td>
+                              echo $diff;
+                        --}}
