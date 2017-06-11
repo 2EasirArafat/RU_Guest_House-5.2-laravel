@@ -10,6 +10,7 @@ use App\Booking;
 use App\Room;
 use App\RoomType;
 use App\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -29,9 +30,10 @@ class UserController extends Controller
     public function showcheck()
     {
 
-        $bookings = Booking::with('user','room')->get();
-    	return view('Page.check')
-        ->with('bookings',$bookings);
+        $bookings = Booking::with('user','room')->where('user_id', Auth::user()->id)->get();
+
+      	return view('Page.check')
+          ->with('bookings',$bookings);
     }
 
 

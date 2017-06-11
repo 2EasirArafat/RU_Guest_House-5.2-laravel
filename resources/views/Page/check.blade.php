@@ -51,13 +51,22 @@
                 @foreach ($bookings as $s)
                           <tr>
                               <!--  <td>{{ \Carbon\Carbon::parse($s->created_at)->format('d-m-Y') }}</td>  _-->
-                                <td>{{\Carbon\Carbon::yesterday()}} </td>
-                                <td>{{\Carbon\Carbon::tomorrow()}} </td>
-                               <td>{{('Room-120')}}</td>
-                                <td>{{$s->status}}</td>
+                                <td>{{$s->arriving_date}} </td>
+                                <td>{{$s->leaving_date}} </td>
+                               <td>{{$s->room->room_name}}</td>
+                                <td>
+                                @if($s->status==0)
+                                  Occupied
+                                @else
+                                  Ended
+                                @endif
+                                  
+                                </td>
                                <td>
+                               @if($s->status==0)
+
           <a class="btn btn-xs btn-primary" href="{{('room_booking')}}">Extend</a>
-      <a class="btn btn-xs btn-danger"  href="{{('#')}}" onclick="return confirm('Are you sure?')">Cancel</a>
+      <a class="btn btn-xs btn-danger"  href="{{('#')}}" onclick="return confirm('Are you sure?')">Cancel</a>           @endif
                             </td>
                            
                          </tr>

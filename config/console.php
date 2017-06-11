@@ -23,8 +23,8 @@ return array(
     */
 
     'credentials' => [
-        'username' => env('CONSOLE_USER', 'username'),
-        'password' => env('CONSOLE_PASS', 'password')
+        'username' => env('CONSOLE_USER', ''),
+        'password' => env('CONSOLE_PASS', '')
     ],
 
     /*
