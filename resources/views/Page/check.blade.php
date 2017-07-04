@@ -22,7 +22,7 @@
 
    <!--Table status started-->
       
-       <div class="jumbotron">
+       <div class="">
 
         <div class="panel-heading">
                  <div class="panel-title text-center">
@@ -36,14 +36,14 @@
 
                  <div class="col-sm-12">
                        <div style="height: 400px; overflow: auto;">
-                        <table class="table table-hover">
+                        <table class="table table-hover table-bordered">
                             <thead>
                             <tr>
                                 <th>Arriving Date</th> 
                                 <th>Leaving Date</th>
                                 <th>Room Name</th>
                                 <th>Status</th> 
-                                <th width="15%">Action</th>
+                                <th>Action</th>
                                 
                             </tr>
                             </thead>

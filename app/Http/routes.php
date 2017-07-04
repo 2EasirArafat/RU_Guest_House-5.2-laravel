@@ -27,7 +27,10 @@ Route::get('finalize','UserController@showfinalize');
 
 Route::get('details','UserController@showdetails');
 
+//Check validity 
 
+
+Route::post('checkValidity',['as' =>'checkValidity' ,'uses' => 'UserController@checkValidity']);
 
 Route::auth();
 

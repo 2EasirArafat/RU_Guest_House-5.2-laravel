@@ -29,11 +29,9 @@ class UserController extends Controller
 
     public function showcheck()
     {
-
-        $bookings = Booking::with('user','room')->where('user_id', Auth::user()->id)->get();
-
-      	return view('Page.check')
-          ->with('bookings',$bookings);
+        $bookings = Booking::where('user_id',Auth::id())->get();
+                return view('Page.check')
+                ->with('bookings',$bookings);
     }
 
 
@@ -69,5 +67,14 @@ class UserController extends Controller
     }
 
 
-
+   public function checkValidity(Request $request)
+   {
+    $rules = [
+        'arriving_date'  => 'required',
+        'leaving_date'   => 'required',
+        'room'           => 'required' 
+    ];
+    $this->validate($request,$rules);
+    return $request->all();
+   }
 }

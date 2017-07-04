@@ -12,14 +12,15 @@
     <title>Ru Guest house website</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Bootstrap theme -->
-   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+   <link href="{{asset('css/bootstrap-theme.min.css')}}" rel="stylesheet">
 
-   <link href="css/style.css" rel="stylesheet">
+   <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
-   <link rel="stylesheet" href="css/login_style.css"/>
-
+   <link rel="stylesheet" href="{{asset('css/login_style.css')}}">
+   <script type="text/javascript" src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+   <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
  
 
     </head>
