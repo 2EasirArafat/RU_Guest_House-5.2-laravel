@@ -31,7 +31,7 @@
 
       <div class="container">
 
-             @yield('body-content');
+             @yield('body-content')
       
       </div> 
 
@@ -40,11 +40,11 @@
        <!--Start of Paragraph container-->
 
        <div class="container">
-              @yield('text-content');
+              @yield('text-content')
        </div>
 
             <div class="container">
-                @yield('footer-content');
+                @yield('footer-content')
              </div>
 
            

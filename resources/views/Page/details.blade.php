@@ -12,7 +12,11 @@
         </div> 
 
           <p class="alert alert-info text-right">
-           <a class="btn btn-primary" href="{{('finalize')}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
+          @if(!empty($checkTeacher))
+            <a class="btn btn-primary" href="{{route('finalize',['room_id' =>$rm->id])}}" role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</a>
+          @else
+           <a class="btn btn-primary" href="{{route('teacherInfo',['room_id' =>$rm->id,'arrive' =>$arrive,'leave'=>$leave])}}" role="button"><span class="glyphicon glyphicon-plus"></span>Next</a>
+          @endif 
          </p>
 
 
@@ -24,21 +28,21 @@
                               <td>{{('1')}}</td>
                       <tr>
                              <th>Arriving Date</th>
-                              <td>{{('01-05-2017')}}</td>
+                              <td>{{$arrive}}</td>
                       <tr>
                              <th>Leaving Date</th>
-                             <td>{{('03-05-2017')}}</td>
+                             <td>{{$leave}}</td>
                       <tr>
 
 
                               <th>Total Days</th>
-                              <td>{{('2')}}</td>
+                              <td>{{$day}}</td>
                       <tr>
                              <th>Room Name</th>
-                             <td>{{('Room-120')}}</td>
+                             <td>{{$rm->room_name}}</td>
                       <tr>
                               <th>Room Capacity</th>
-                              <td>{{('3')}}</td>
+                              <td>{{$capacity}}</td>
   
     </tr>
   </tbody>

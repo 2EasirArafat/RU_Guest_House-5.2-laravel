@@ -36,5 +36,5 @@ return array(
     |
     */
 
-    'asset_url' => Config('app.url').'/RU_Guest_Housee/public/vendor/console'
+    'asset_url' => Config('app.url').'/ru-room/public/vendor/console'
 );
