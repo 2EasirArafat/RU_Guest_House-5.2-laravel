@@ -22,7 +22,7 @@
 
    <!--Table status started-->
       
-       <div class="container">
+       <div class="">
 
         <div class="panel-heading">
                  <div class="panel-title text-center">
