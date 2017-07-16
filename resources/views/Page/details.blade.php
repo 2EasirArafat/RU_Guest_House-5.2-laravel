@@ -18,7 +18,7 @@
           <input type="hidden" name="leave" value="{{$leave}}">
           <input type="hidden" name="room" value="{{$rm->id}}">
  
-          <button class="btn btn-primary pull-right" type="submit"  role="button"><span class="glyphicon glyphicon-plus"></span>Confirm Booking</button>
+          <button class="btn btn-primary pull-right" type="submit"  role="button"><span class="glyphicon glyphicon-plus" onclick="return confirm('Your Booking will be Confirmed')"</span>Confirm Booking</button>
              
           </form>
 

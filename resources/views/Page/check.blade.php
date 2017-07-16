@@ -4,7 +4,7 @@
 
 
   <p class="alert alert-info text-right">
-    <a class="btn btn-xs btn-primary" href="{{('room_booking')}}" role="button"><i class="glyphicon glyphicon-plus"></i>Add Booking</a>
+    <a class="btn btn-xs btn-primary" href="{{('room_booking')}}" role="button"><span class="glyphicon glyphicon-plus"</span>Add Booking</a>
   </p>
 
 
