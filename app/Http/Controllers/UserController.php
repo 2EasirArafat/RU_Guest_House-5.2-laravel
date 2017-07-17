@@ -36,10 +36,13 @@ class UserController extends Controller
     }
 
 
-
     public function showroom_booking()
     {
-    	return view('Page.room_booking');
+        
+        $room_types = RoomType::lists('room_category','id');
+        
+        return view('Page.room_booking')
+                ->with('room_types', $room_types);
     }
 
 
@@ -93,18 +96,21 @@ class UserController extends Controller
     $this->validate($request,$rules);
     $arrive    = Carbon::parse($request->arriving_date) ;
     $leave     = Carbon::parse($request->leaving_date) ;
+    
     if($arrive< Carbon::now())
     {
         return back()->with('msg','Please select a valid date')
                      ->withInput();
     }
+    
     $day = $arrive->diffInDays($leave);
     if( $day== 0)
     {
         $day = $day + 1;
     }
+    
     $room      = $request->room ;
-    $roomType      = RoomType::where('room_category',$room)->first();
+    $roomType  = RoomType::find($room);
 
     $rm    = Room::where('roomtype_id',$roomType->id)
                         ->where('room_status','empty')

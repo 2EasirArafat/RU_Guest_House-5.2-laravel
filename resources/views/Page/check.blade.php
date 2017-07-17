@@ -22,7 +22,7 @@
 
    <!--Table status started-->
       
-       <div class="">
+       <div class="container">
 
         <div class="panel-heading">
                  <div class="panel-title text-center">
@@ -50,7 +50,6 @@
                             <tbody>
                 @foreach ($bookings as $s)
                           <tr>
-                              <!--  <td>{{ \Carbon\Carbon::parse($s->created_at)->format('d-m-Y') }}</td>  _-->
                                 <td>{{$s->arriving_date}} </td>
                                 <td>{{$s->leaving_date}} </td>
                                <td>{{$s->room->room_name}}</td>

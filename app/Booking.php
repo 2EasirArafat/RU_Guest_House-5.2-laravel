@@ -18,4 +18,9 @@ class Booking extends Model
     {
     	return $this->belongsTo('App\User');
     }
+
+    function Bookingdetails()
+    {
+        return $this->hasMany('App\BookingDetail');
+    }
 }
