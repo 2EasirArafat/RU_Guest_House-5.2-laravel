@@ -48,6 +48,7 @@
                             </tr>
                             </thead>
                             <tbody>
+              @if(!empty($bookings))              
                 @foreach ($bookings as $s)
                           <tr>
                                 <td>{{$s->arriving_date}} </td>
@@ -70,6 +71,7 @@
                            
                          </tr>
               @endforeach
+           @endif   
                       </tbody>
 
 

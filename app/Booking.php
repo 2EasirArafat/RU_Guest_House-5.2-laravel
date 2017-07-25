@@ -10,7 +10,8 @@ class Booking extends Model
         'name', 'salaryID', 'designation','department','email','arriving_date','	leaving_date','room_id','status',
     ];
 
-    function room(){
+    function room()
+    {
         return $this->belongsTo('App\Room');
     }
 
