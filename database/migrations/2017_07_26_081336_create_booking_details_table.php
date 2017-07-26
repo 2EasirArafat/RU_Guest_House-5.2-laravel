@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookingdetailsTable extends Migration
+class CreateBookingDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,6 @@ class CreateBookingdetailsTable extends Migration
             $table->integer('booking_id');
             $table->date('booking_date');
             $table->integer('roomtype_id');
-
             $table->timestamps();
         });
     }

@@ -21,7 +21,6 @@ class BookingTableSeeder extends Seeder
                   'designation'=>'Teacher',
                   'department'=>'CSE',
                   'email'=>'john@clivern.com',
-                  'room_id' =>1,
                   'arriving_date'=>Carbon::createFromDate(2017,11,31),
                   'leaving_date'=>Carbon::createFromDate(2017,12,3),
                   'status'=>'0'
@@ -34,7 +33,6 @@ class BookingTableSeeder extends Seeder
                  'designation'=>'Teacher',
                  'department'=>'ICE',
                  'email'=>'arafat@clivern.com',
-                 'room_id'=>2,
                  'arriving_date'=>Carbon::createFromDate(2017,10,30),
                   'leaving_date'=>Carbon::createFromDate(2017,10,31),
                  'status'=>'empty'],
@@ -44,7 +42,6 @@ class BookingTableSeeder extends Seeder
                 'salaryID'=>'800000',
                 'designation'=>'Teacher',
                 'department'=>'CSE',
-                'room_id'    =>3,
                 'email'=>'najmul@clivern.com',
                 'arriving_date'=>Carbon::createFromDate(2017,8,31),
                   'leaving_date'=>Carbon::createFromDate(2017,8,31),

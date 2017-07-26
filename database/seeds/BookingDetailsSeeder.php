@@ -11,7 +11,7 @@ class BookingDetailsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('bookingdetails')->insert([
+       DB::table('bookingdetails')->insert([
         	'booking_id'		=> 1 ,
         	'booking_date' 		=> Carbon::createFromDate(2017,7,24),
         	'roomtype_id' 			=> 1 

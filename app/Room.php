@@ -19,9 +19,4 @@ class Room extends Model
         return $this->hasMany('App\Booking');
     }
 
-     function Bookingdetails()
-    {
-        return $this->hasMany('App\BookingDetail');
-    }
-
 }

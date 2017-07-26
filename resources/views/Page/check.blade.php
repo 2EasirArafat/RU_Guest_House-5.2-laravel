@@ -4,7 +4,7 @@
 
 
   <p class="alert alert-info text-right">
-    <a class="btn btn-xs btn-primary" href="{{('room_booking')}}" role="button"><span class="glyphicon glyphicon-plus"</span>Add Booking</a>
+    <a class="btn btn-xs btn-primary" href="{{('room_booking')}}" role="button"><i class="glyphicon glyphicon-plus"></i>Add Booking</a>
   </p>
 
 
@@ -22,9 +22,13 @@
 
    <!--Table status started-->
       
-       <div class="container">
+       <div class="">
 
+       
         <div class="panel-heading">
+                   @if(session('msg'))
+                    <div class="text-center alert alert-success" >{{session('msg')}}</div>
+                  @endif
                  <div class="panel-title text-center">
                     <h2 class="title">All Booking Information</h2>
                   
@@ -48,9 +52,9 @@
                             </tr>
                             </thead>
                             <tbody>
-              @if(!empty($bookings))              
                 @foreach ($bookings as $s)
                           <tr>
+                             
                                 <td>{{$s->arriving_date}} </td>
                                 <td>{{$s->leaving_date}} </td>
                                <td>{{$s->room->room_name}}</td>
@@ -66,12 +70,11 @@
                                @if($s->status==0)
 
           <a class="btn btn-xs btn-primary" href="{{('room_booking')}}">Extend</a>
-      <a class="btn btn-xs btn-danger"  href="{{('#')}}" onclick="return confirm('Are you sure?')">Cancel</a>           @endif
+      <a class="btn btn-xs btn-danger"  href="{{route('booking.cancel',['id'=>$s->id])}}" onclick="return confirm('Are you sure?')">Cancel</a>           @endif
                             </td>
                            
                          </tr>
               @endforeach
-           @endif   
                       </tbody>
 
 

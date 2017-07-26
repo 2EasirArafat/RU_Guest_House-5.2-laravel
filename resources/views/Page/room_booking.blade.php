@@ -30,9 +30,10 @@
 
                  <select class="btn btn-md" name="room">
                     <option value="" selected="">SELECT ROOM</option>
-                    @foreach ($room_types as $id =>$value)
-                      <option value="{{$id}}" >{{$value}}</option>
-                    @endforeach
+                    <option value="small" >SMALL</option>
+                    <option value="medium" >MEDIUM</option>
+                    <option value="large">LARGE</option>
+                    <option value="extra_large">EXTRA LARGE</option>
                 </select>
                 {!!$errors->first('room','<span class="help-block">:message</span>')!!}
             </div>

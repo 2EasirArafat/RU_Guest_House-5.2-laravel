@@ -6,12 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    protected $fillable = [
-        'name', 'salaryID', 'designation','department','email','arriving_date','	leaving_date','room_id','status',
-    ];
+    protected $guarded = [''];
 
-    function room()
-    {
+    function room(){
         return $this->belongsTo('App\Room');
     }
 
@@ -19,7 +16,6 @@ class Booking extends Model
     {
     	return $this->belongsTo('App\User');
     }
-
     function Bookingdetails()
     {
         return $this->hasMany('App\BookingDetail');
