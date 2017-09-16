@@ -55,22 +55,23 @@
                 @foreach ($bookings as $s)
                           <tr>
                              
-                                <td>{{$s->arriving_date}} </td>
-                                <td>{{$s->leaving_date}} </td>
-                               <td>{{$s->room->room_name}}</td>
-                                <td>
+                              <td>{{$s->arriving_date}} </td>
+                              <td>{{$s->leaving_date}} </td>
+                              <td>{{$s->room->room_name}}</td>
+                              <td>
                                 @if($s->status==0)
                                   Occupied
                                 @else
                                   Ended
                                 @endif
                                   
-                                </td>
-                               <td>
-                               @if($s->status==0)
+                              </td>
+                              <td>
+                          @if($s->status==0)
 
-          <a class="btn btn-xs btn-primary" href="{{('room_booking')}}">Extend</a>
-      <a class="btn btn-xs btn-danger"  href="{{route('booking.cancel',['id'=>$s->id])}}" onclick="return confirm('Are you sure?')">Cancel</a>           @endif
+                             <a class="btn btn-xs btn-primary" href="{{ route('room_booking.extend',['id' => $s->id])}}">Extend</a>
+                             <a class="btn btn-xs btn-danger"  href="{{route('booking.cancel',['id' => $s->id])}}" onclick="return confirm('Are you sure?')">Cancel</a>  
+                          @endif
                             </td>
                            
                          </tr>

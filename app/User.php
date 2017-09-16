@@ -25,8 +25,12 @@ class User extends Authenticatable
     ];
 
 
-    function booking()
+    public  function booking()
     {
         return $this->hasMany('App\Booking');
+    }
+    public function isAdmin()
+    {
+        return $this->user_type_id == 1;
     }
 }

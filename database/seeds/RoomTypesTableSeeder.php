@@ -15,10 +15,10 @@ class RoomTypesTableSeeder extends Seeder
 
             [
 
-                ['room_category'=>'small','room_capacity'=>'1'],
-                ['room_category'=>'large','room_capacity'=>'3'],
-                ['room_category'=>'medium','room_capacity'=>'2'],
-                ['room_category'=>'extra_large','room_capacity'=>'4'],
+                ['room_category'=>'SMALL','room_capacity'=>'1'],
+                ['room_category'=>'MEDIUM','room_capacity'=>'2'],
+                ['room_category'=>'LARGE','room_capacity'=>'3'],
+                ['room_category'=>'EXTRA LARGE','room_capacity'=>'4'],
             ]
 
 

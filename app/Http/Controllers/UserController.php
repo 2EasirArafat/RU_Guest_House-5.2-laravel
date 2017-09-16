@@ -34,7 +34,19 @@ class UserController extends Controller
 
     public function showcheck()
     {
-       $bookings = Booking::where('user_id',Auth::id())->get();
+
+           $bookings = Booking::where('user_id',Auth::id())
+                                ->orderBy('created_at','desc')
+                                ->get();
+         
+         foreach($bookings as $booking){
+           $leave     = Carbon::parse($booking->leaving_date) ;
+           
+             if($leave < Carbon::now())
+             {
+                 Booking::findOrFail($booking->id)->update(['status'=> 1]);
+             }
+           }
                 return view('Page.check')
                 ->with('bookings',$bookings);
     }
@@ -60,7 +72,7 @@ class UserController extends Controller
               'user_id'       => Auth::user()->id,
               'arriving_date' => $arriving_date,
               'leaving_date'  => $leaving_date ,
-              'room_id'       => $room,
+              'room_id'       => $room
               ]);
           
               $start_dt = Carbon::parse( $arriving_date)->toDateString();
@@ -76,8 +88,8 @@ class UserController extends Controller
               ]);
               $date = date ("Y-m-d", strtotime("+1 day", strtotime($date)));
              }
-
-        return view('Page.finalize',compact('booking'));
+        $bookingDetails = Booking::FindOrFail($booking->id);
+        return view('Page.finalize',compact('bookingDetails'));
                     
        }
     }
@@ -172,5 +184,57 @@ class UserController extends Controller
       Booking::findOrFail($id)->delete();
       BookingDetail::where('booking_id',$id)->delete();
       return back()->with('msg'," Booking canceled Successfully.");
+   }
+
+   public function extendBooking($id){
+
+       $booking_extend_details = Booking::findOrFail($id);
+
+      return view('page.booking_extend',compact('booking_extend_details'));
+   }
+
+
+   public function checkExtendValidity(Request $request)
+   {
+    $roles = ['leaving_date'=>'required'];
+    $this->validate($request,$roles);
+   $start_dt = Carbon::parse( $request->arriving_date)->toDateString();
+   
+    $arriving_date = date ("Y-m-d", strtotime("+1 day", strtotime($start_dt)));
+    $bookingdetails = BookingDetail::whereBetween(
+                            'booking_date',[$arriving_date,$request->leaving_date])
+                         ->where('roomtype_id',$request->room)
+                        ->first();
+   
+
+    if(!$bookingdetails){
+
+       $booking = Booking::findOrFail($request->id)->update(['leaving_date'=>$request->leaving_date]);
+                          
+
+       $start_dt = $arriving_date;
+       $end_dt   = Carbon::parse( $request->leaving_date)->toDateString();
+       $date     = $arriving_date ;
+       
+          if($booking){
+                while(strtotime($date) <= strtotime($end_dt))
+                {
+                   $bookingdetails = BookingDetail::create([
+                      'booking_id'      => $request->id ,
+                      'booking_date'    => $date,
+                      'roomtype_id'     => $request->room
+                      ]);
+                  $date = date ("Y-m-d", strtotime("+1 day", strtotime($date)));
+                 }
+
+                 $msg = "Date Successfully extended";
+           
+            }
+      }
+    else{
+        $msg ="No availale room is found!";
+    }
+
+    return back()->with('msg',$msg);
    }
 }

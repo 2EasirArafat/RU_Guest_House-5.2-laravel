@@ -18,38 +18,38 @@
     <tr>
       <th>Name</th>
       
-      <td>{{($booking->user->name)}}</td>
+      <td>{{($bookingDetails->user->name)}}</td>
       
     <tr>
       <th>SalaryID</th>
-       @if($booking->salaryID)
-      <td>{{($booking->salaryID)}}</td>
+       @if($bookingDetails->salaryID)
+      <td>{{$bookingDetails->salaryID}}</td>
       @endif
     <tr>
       <th>Department</th>
-      @if($booking->department)
-      <td>{{($booking->department)}}
+      @if($bookingDetails->department)
+      <td>{{($bookingDetails->department)}}
       @endif
     <tr>
       <th>Designation</th>
-      @if($booking->designation)
-      <td>{{($booking->designation)}}</td>
+      @if($bookingDetails->designation)
+      <td>{{($bookingDetails->designation)}}</td>
       @endif
       
     <tr>
       <th>Email</th>
      
-      <td>{{($booking->user->email)}}</td>
+      <td>{{($bookingDetails->user->email)}}</td>
      
     </tr>
      <tr>
       <th>Arriving date</th>
-      <td>{{($booking->arriving_date)}}</td>
+      <td>{{($bookingDetails->arriving_date)}}</td>
      
     </tr>
      <tr>
       <th>Leaving date</th>
-      <td>{{($booking->leaving_date)}}</td>
+      <td>{{($bookingDetails->leaving_date)}}</td>
      
     </tr>
   </tbody>

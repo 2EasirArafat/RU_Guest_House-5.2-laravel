@@ -10,8 +10,13 @@
 
                      <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                         
+
                         @if (Auth::user())
                         <li><a href="{{url('/check')}}">All Booking</a>
+                           @if (Auth::user()->type == 1)
+                            <li><a href="{{ url('/admin') }}">Admin</a></li>
+                           @endif
                           <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}} <b class="caret"></b></a>
                             <ul class="dropdown-menu">

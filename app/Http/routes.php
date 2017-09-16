@@ -31,11 +31,24 @@ Route::get('details',['as'=>'details','uses'=>'UserController@showdetails']);
 //Check validity 
 
 Route::get('booking-cancel/{id}',['as'=>'booking.cancel', 'uses'=>'UserController@cancelBooking']);
+Route::get('booking-extend/{id}',['as'=>'room_booking.extend', 'uses'=>'UserController@extendBooking']);
+
 
 Route::post('checkValidity',['as' =>'checkValidity' ,'uses' => 'UserController@checkValidity']);
+
+Route::post('checkextendValidity',['as' =>'check_extend.Validity' ,'uses' => 'UserController@checkExtendValidity']);
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
 Route::get('auth/logout', 'Auth\AuthController@logout');
+
+
+//Admin controller routes are ...
+
+
+
+Route::get('admin',['as'=>'admin.index','uses'=>'AdminController@index']);
+Route::get('admin/addRoom',['as'=>'add.room','uses'=>'AdminController@addRoom']);
+Route::post('admin/addRoom',['as'=>'store.room','uses'=>'AdminController@storeRoom']);
