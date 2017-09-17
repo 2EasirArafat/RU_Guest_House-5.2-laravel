@@ -17,10 +17,36 @@
    <link href="{{asset('css/bootstrap-theme.min.css')}}" rel="stylesheet">
 
    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/image.css')}}" rel="stylesheet">
+
+
+
+
 
    <link rel="stylesheet" href="{{asset('css/login_style.css')}}">
    <script type="text/javascript" src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
    <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
+
+
+
+
+  <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script>
+        $(function () {
+             $('#datetimepicker').datetimepicker({ minDate: new Date() }); 
+        });
+    </script>
+
+
+   
+
+
+
  
 
     </head>

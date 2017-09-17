@@ -52,3 +52,15 @@ Route::get('auth/logout', 'Auth\AuthController@logout');
 Route::get('admin',['as'=>'admin.index','uses'=>'AdminController@index']);
 Route::get('admin/addRoom',['as'=>'add.room','uses'=>'AdminController@addRoom']);
 Route::post('admin/addRoom',['as'=>'store.room','uses'=>'AdminController@storeRoom']);
+
+Route::get('admin/detailsRoom',['as'=>'details.room','uses'=>'AdminController@details']);
+
+
+//-------------------------------------------------------------
+//------UserManagement routes are started here (HomeController)-------
+
+Route::get('password_changed',['as'=>'changed.password', 'uses' =>'HomeController@changedPassword']);
+Route::post('password_changed',['as'=>'store.password', 'uses' =>'HomeController@storePassword']);
+
+
+

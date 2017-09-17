@@ -15,7 +15,7 @@
           </dir>
           <div class="form-group @if($errors->has('arriving_date')) has-error @endif">
               <label >Arriving Date</label>
-              <input type="date" class="form-control"  name ="arriving_date" id="exampleInputEmail3" value="{{old('arriving_date')}}">
+              <input type="date" class="datepicker"  name ="arriving_date" id="exampleInputEmail3" value="{{old('arriving_date')}}">
               {!!$errors->first('arriving_date','<span class="help-block">:message</span>')!!}
           </div>
           

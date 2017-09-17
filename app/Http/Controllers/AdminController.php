@@ -14,6 +14,25 @@ class AdminController extends Controller
 
     // 	$this->middleware('auth');
     // }
+
+public function details()
+{
+  $rooms=Room::with('roomtype')->get();
+
+  return view('admin.show') ->with('rooms',$rooms);
+}
+
+// Can not done...
+
+ public function cancel()
+   {
+     $rooms= Room::findOrFail()->delete();
+      return back()->with('msg'," Room information canceled Successfully.");
+   }
+
+
+
+
     public function index()
     {
        $scount= Room::where('roomtype_id',1)->count();

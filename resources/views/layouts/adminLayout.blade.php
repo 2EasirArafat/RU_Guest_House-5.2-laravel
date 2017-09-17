@@ -76,6 +76,9 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li>
+                                <a href="{{route('changed.password')}}"> <i class="fa fa-unlock""></i> Changed Password</a>
+                            </li>
                             </ul>
                         </li>
                     @endif
@@ -93,7 +96,7 @@
                     </li>
 
                     <li class="">
-                         <a href="{{'#'}}"> <i class="fa fa-fw fa-dashboard"></i> Delete Room </a>
+                         <a href="{{route('details.room')}}"> <i class="fa fa-fw fa-dashboard"></i> Room information</a>
                     </li>
                   
                 </ul>
