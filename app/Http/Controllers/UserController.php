@@ -121,7 +121,7 @@ class UserController extends Controller
     $arrive    = Carbon::parse($request->arriving_date) ;
     $leave     = Carbon::parse($request->leaving_date) ;
     
-    if($arrive< Carbon::now())
+    if($arrive< Carbon::now() || $arrive >$leave)
     {
         return back()->with('msg','Please select a valid date')
                      ->withInput();
@@ -199,15 +199,18 @@ class UserController extends Controller
     $roles = ['leaving_date'=>'required'];
     $this->validate($request,$roles);
    $start_dt = Carbon::parse( $request->arriving_date)->toDateString();
-   
+   $leave    = Carbon::parse( $request->leaving_date)->toDateString();
     $arriving_date = date ("Y-m-d", strtotime("+1 day", strtotime($start_dt)));
     $bookingdetails = BookingDetail::whereBetween(
                             'booking_date',[$arriving_date,$request->leaving_date])
                          ->where('roomtype_id',$request->room)
                         ->first();
    
-
-    if(!$bookingdetails){
+     if($start_dt>$leave)
+     {
+      return back()->with('msg','PLease select a valid date');
+     }
+  if(!$bookingdetails){
 
        $booking = Booking::findOrFail($request->id)->update(['leaving_date'=>$request->leaving_date]);
                           

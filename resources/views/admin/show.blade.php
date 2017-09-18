@@ -58,7 +58,7 @@
                               <td>{{$s->roomtype->room_category}}</td>
                               <td>{{$s->roomtype->room_capacity}}</td>
                              <td> 
-                             <a class="btn btn-xs btn-danger"  href="{{'#'}}" onclick="return confirm('Are you sure?')">Cancel</a>  
+                             <a class="btn btn-xs btn-danger"  href="{{ route('delete.room', ['id' => $s->id]) }}" onclick="return confirm('Are you sure?')">Delete</a>  
                         
                             </td>
                            

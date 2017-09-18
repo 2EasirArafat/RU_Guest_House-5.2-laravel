@@ -71,4 +71,17 @@ public function details()
 
          return back()->with('msg',$msg);
     }
+
+
+
+
+    public function deleteRoom($id)
+    {
+      
+      $roomInstance = Room::find($id);
+
+      $roomInstance->delete();
+
+      return redirect()->route('details.room');
+    }
 }

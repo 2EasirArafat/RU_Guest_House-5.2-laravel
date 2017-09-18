@@ -57,7 +57,7 @@
                              
                               <td>{{$s->arriving_date}} </td>
                               <td>{{$s->leaving_date}} </td>
-                              <td>{{$s->room->room_name}}</td>
+                              <td>{{$s->room->room_name}}
                               <td>
                                 @if($s->status==0)
                                   Occupied

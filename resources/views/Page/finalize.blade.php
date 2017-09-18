@@ -8,6 +8,7 @@
 
       <div class="panel-heading">
                  <div class="panel-title text-center">
+                    <h1>Rajshahi University </h1>
                     <h2 class="title">Teacher/Offier Information</h2>
                   
                   </div>
@@ -22,20 +23,26 @@
       
     <tr>
       <th>SalaryID</th>
-       @if($bookingDetails->salaryID)
+    <!--   @if($bookingDetails->salaryID)
       <td>{{$bookingDetails->salaryID}}</td>
       @endif
+      -->
+      <td>25000</td>
     <tr>
       <th>Department</th>
-      @if($bookingDetails->department)
+   <!--   @if($bookingDetails->department)
       <td>{{($bookingDetails->department)}}
       @endif
+      -->
+      <td>CSE</td>
     <tr>
       <th>Designation</th>
+   <!--   
       @if($bookingDetails->designation)
       <td>{{($bookingDetails->designation)}}</td>
       @endif
-      
+    -->
+    <td>Teacher</td>  
     <tr>
       <th>Email</th>
      

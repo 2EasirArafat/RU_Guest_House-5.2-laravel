@@ -55,6 +55,8 @@ Route::post('admin/addRoom',['as'=>'store.room','uses'=>'AdminController@storeRo
 
 Route::get('admin/detailsRoom',['as'=>'details.room','uses'=>'AdminController@details']);
 
+Route::get('admin/delete_room/{id}', 'AdminController@deleteRoom')->name('delete.room');
+
 
 //-------------------------------------------------------------
 //------UserManagement routes are started here (HomeController)-------
