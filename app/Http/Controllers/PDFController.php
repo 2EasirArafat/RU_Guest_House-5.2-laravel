@@ -10,11 +10,15 @@ use PDF;
 
 use App\Booking;
 
+use User;
+
 class PDFController extends Controller
 {
     public function getPDF(){
-    	$bookings=Booking::all();
-    	$pdf=PDF::loadView('Page.finalize',['bookings'=>$bookings]);
-    	return $pdf->download('finalize.pdf');
+    	$bookingDetails=Booking::with('user')->get();
+    	$pdf=PDF::loadView('Page.finalize');
+    	return $pdf->download('finalize.pdf')->with('bookingDetails',$bookingDetails);
     }
 }
+
+

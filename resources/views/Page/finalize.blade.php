@@ -68,7 +68,7 @@
 
              <p class="text-right">
           
-  <a class="btn btn-md btn-primary" href="{{('#')}}" role="button"><i class="glyphicon glyphicon-forward"></i>Print info</a> 
+  <a class="btn btn-md btn-primary" href="{{url('getPDF')}}" role="button"><i class="glyphicon glyphicon-forward"></i>Print info</a> 
            </p>
 
 

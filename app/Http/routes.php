@@ -64,3 +64,6 @@ Route::post('password_changed',['as'=>'store.password', 'uses' =>'HomeController
 
 
 
+//-------------------
+
+Route::get('/getPDF','PDFController@getPDF');

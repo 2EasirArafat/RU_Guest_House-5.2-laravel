@@ -29,24 +29,6 @@
 
 
 
-
-  <script src="~/Scripts/jquery-2.1.4.min.js"></script>
-    <script src="~/Scripts/moment.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-    <script>
-        $(function () {
-             $('#datetimepicker').datetimepicker({ minDate: new Date() }); 
-        });
-    </script>
-
-
-   
-
-
-
  
 
     </head>

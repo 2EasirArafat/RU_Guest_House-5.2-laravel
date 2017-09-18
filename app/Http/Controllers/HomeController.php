@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function changedPassword()
     {
-       $user = Auth::user();
+        $user = User::find(auth()->user()->id);
 
         return view('users.changedPassword',compact('user'));
     }

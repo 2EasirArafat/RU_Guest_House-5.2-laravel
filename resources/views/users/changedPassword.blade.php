@@ -2,7 +2,7 @@
 
 
 
-@section('group_body')
+@section('admin_content')
 
 <div class="row">
 	<div class="col-sm-9">
